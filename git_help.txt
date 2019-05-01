@@ -5,3 +5,5 @@ git remote add origin https://github.com/zhanghaoshan/aaa.git
 git push -u origin master
 
 git remote remove  origin
+git pull --rebase orogin master
+
