@@ -28,10 +28,15 @@ def pad_sents(sents, pad_token):
     """
     sents_padded = []
 
-    ### YOUR CODE HERE (~6 Lines)
 
-
-    ### END YOUR CODE
+    max_sentence=0
+    for sentence in sents:
+        if len(sentence)>max_sentence:
+            max_sentence=len(sentence)
+    for sentence in sents:
+        if len(sentence)!=max_sentence:
+            sentence=sentence+(max_sentence-len(sentence))*pad_token
+        sents_padded.append(sentence)
 
     return sents_padded
 
